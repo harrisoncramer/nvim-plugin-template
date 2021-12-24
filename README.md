@@ -1,4 +1,4 @@
-# Lua Plugin
+# Neovim Lua Plugin
 
 This repository is a Neovim plugin template. Many thanks to <a href="https://github.com/ThePrimeagen">The Primeagen</a> for his <a href="https://www.youtube.com/watch?v=9L4sW047oow">tutorial</a>.
 
