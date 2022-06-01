@@ -5,7 +5,7 @@ This repository is a Neovim plugin template. Many thanks to <a href="https://git
 To work on the plugin, you must start Neovim with this directory as the current working directory. From within this directory, start up Neovim:
 
 ```
-nvim --cmd "set rtp+=$(pwd) ."
+nvim --cmd "set rtp+=$(pwd)"
 ```
 
 This will automatically source the `your-first-plugin.vim` file, which contains a function. This function will re-source the Lua plugin that we're working on before calling the function it contains. This will ensure that we are calling the latest version of our code whenever we make edits.
