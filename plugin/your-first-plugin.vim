@@ -1,6 +1,14 @@
-lua require("psql")
-fun! Source()
-  lua for k in pairs(package.loaded) do if k:match("your-first-plugin") then package.loaded[k] = nil require(k).setup({}) end end
+local plugin_name = "my-first-plugin"
+
+lua require(plugin_name).setup({})
+
+fun! Dump()
+  lua for k in pairs(package.loaded) do if k:match(plugin_name) then package.loaded[k] = nil end end
 endfun
 
-:autocmd BufWritePost *.lua call Source()
+fun! Reload()
+  lua require(plugin_name).setup({})
+endfun
+
+:autocmd BufWritePost *.lua call Dump()
+:autocmd BufWritePost *.lua call Reload()
