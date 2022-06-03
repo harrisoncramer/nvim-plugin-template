@@ -8,10 +8,4 @@ To work on the plugin, you must start Neovim with this directory as the current 
 nvim --cmd "set rtp+=$(pwd)"
 ```
 
-This will automatically source the `your-first-plugin.vim` file, which contains a function. This function will re-source the Lua plugin that we're working on before calling the function it contains. This will ensure that we are calling the latest version of our code whenever we make edits.
-
-We can call the vim function (and through it, the Lua function from our module) like this:
-
-```
-:call MyFirstPlugin()
-```
+This will automatically source the `your-first-plugin.vim` file, which loads the lua module. This function will re-source the Lua plugin that we're working on every time a lua buffer is saved.
